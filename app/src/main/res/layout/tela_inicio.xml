@@ -28,6 +28,13 @@
         </Button>
 
         <Button
+            android:id="@+id/buttonPostar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+">
+        </Button>
+
+        <Button
             android:id="@+id/buttonInicio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,21 +49,26 @@
         </Button>
 
         <Button
-            android:id="@+id/buttonMensagem"
+            android:id="@+id/buttonContato"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mensagem">
+            android:text="Contatos">
         </Button>
 
         <Button
-            android:id="@+id/buttonPostar"
+            android:id="@+id/buttonMensagem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="+">
+            android:text="Mensagens">
+        </Button>
+
+        <Button
+            android:id="@+id/buttonSair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sair">
         </Button>
 
     </LinearLayout>
-
-
 
 </androidx.core.widget.NestedScrollView>
