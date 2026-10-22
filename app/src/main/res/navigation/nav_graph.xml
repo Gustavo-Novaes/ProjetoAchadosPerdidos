@@ -3,31 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/TelaLogin">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.projetoachadosperdidos.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/TelaLogin"
+        android:name="com.example.projetoachadosperdidos.TelaLogin"
+        android:label="Tela Login"
+        tools:layout="@layout/tela_login">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_TelaLogin_to_TelaCadastro"
+            app:destination="@id/TelaCadastro" />
         <action
-            android:id="@+id/action_FirstFragment_to_TelaInicio"
+            android:id="@+id/action_TelaLogin_to_TelaInicio"
             app:destination="@id/TelaInicio" />
 
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.projetoachadosperdidos.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/TelaCadastro"
+        android:name="com.example.projetoachadosperdidos.TelaCadastro"
+        android:label="Tela Cadastro"
+        tools:layout="@layout/tela_cadastro">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_TelaCadastro_to_TelaLogin"
+            app:destination="@id/TelaLogin" />
     </fragment>
 
     <fragment
@@ -36,5 +36,36 @@
         android:label="Tela Inicio"
         tools:layout="@layout/tela_inicio">
 
+        <action
+            android:id="@+id/action_TelaInicio_to_TelaPerfil"
+            app:destination="@id/TelaPerfil" />
+        <action
+            android:id="@+id/action_TelaInicio_to_TelaLogin"
+            app:destination="@id/TelaLogin" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TelaPerfil"
+        android:name="com.example.projetoachadosperdidos.TelaPerfil"
+        android:label="Tela Início"
+        tools:layout="@layout/tela_perfil">
+
+        <action
+            android:id="@+id/action_TelaPerfil_to_TelaEdicaoPerfil"
+            app:destination="@id/TelaEdicaoPerfil" />
+        <action
+            android:id="@+id/action_TelaPerfil_to_TelaInicio"
+            app:destination="@id/TelaInicio" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TelaEdicaoPerfil"
+        android:name="com.example.projetoachadosperdidos.TelaEdicaoPerfil"
+        android:label="Tela Edição Perfil"
+        tools:layout="@layout/tela_edicao_perfil">
+
+        <action
+            android:id="@+id/action_TelaEdicaoPerfil_to_TelaPerfil"
+            app:destination="@id/TelaPerfil" />
     </fragment>
 </navigation>

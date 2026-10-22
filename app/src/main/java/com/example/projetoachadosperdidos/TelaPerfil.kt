@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.projetoachadosperdidos.databinding.FragmentFirstBinding
+import com.example.projetoachadosperdidos.databinding.TelaPerfilBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 class TelaPerfil : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: TelaPerfilBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,7 +24,7 @@ class TelaPerfil : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = TelaPerfilBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -32,6 +32,13 @@ class TelaPerfil : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.buttonEditarPerfil.setOnClickListener {
+            findNavController().navigate(R.id.action_TelaPerfil_to_TelaEdicaoPerfil)
+        }
+
+        binding.buttonVoltar.setOnClickListener {
+            findNavController().navigate(R.id.action_TelaPerfil_to_TelaInicio)
+        }
 
     }
 

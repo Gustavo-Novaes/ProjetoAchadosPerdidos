@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.projetoachadosperdidos.databinding.FragmentFirstBinding
+import com.example.projetoachadosperdidos.databinding.TelaInicioBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 class TelaInicio : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: TelaInicioBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,7 +24,7 @@ class TelaInicio : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = TelaInicioBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -32,6 +32,13 @@ class TelaInicio : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.buttonPerfil.setOnClickListener {
+            findNavController().navigate(R.id.action_TelaInicio_to_TelaPerfil)
+        }
+
+        binding.buttonSair.setOnClickListener {
+            findNavController().navigate(R.id.action_TelaInicio_to_TelaLogin)
+        }
 
     }
 
