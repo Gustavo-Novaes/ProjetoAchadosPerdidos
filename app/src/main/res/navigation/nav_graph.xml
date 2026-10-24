@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_TelaInicio_to_TelaLogin"
             app:destination="@id/TelaLogin" />
+        <action
+            android:id="@+id/action_TelaInicio_to_TelaCriarPostagem"
+            app:destination="@id/TelaCriarPostagem" />
     </fragment>
 
     <fragment
@@ -67,5 +70,16 @@
         <action
             android:id="@+id/action_TelaEdicaoPerfil_to_TelaPerfil"
             app:destination="@id/TelaPerfil" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TelaCriarPostagem"
+        android:name="com.example.projetoachadosperdidos.TelaCriarPostagem"
+        android:label="Tela Criar Postagem"
+        tools:layout="@layout/tela_criar_postagem">
+
+        <action
+            android:id="@+id/action_TelaCriarPostagem_to_TelaInicio"
+            app:destination="@id/TelaInicio" />
     </fragment>
 </navigation>

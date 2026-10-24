@@ -22,50 +22,57 @@
 
         <Button
             android:id="@+id/buttonPesquisar"
-            android:layout_width="match_parent"
+            android:layout_width="155sp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Pesquisar">
         </Button>
 
         <Button
-            android:id="@+id/buttonPostar"
-            android:layout_width="match_parent"
+            android:id="@+id/buttonCriarPostagem"
+            android:layout_width="155sp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="+">
         </Button>
 
         <Button
             android:id="@+id/buttonInicio"
-            android:layout_width="match_parent"
+            android:layout_width="155sp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Início">
         </Button>
 
         <Button
             android:id="@+id/buttonPerfil"
-            android:layout_width="match_parent"
+            android:layout_width="155sp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Perfil">
         </Button>
 
         <Button
             android:id="@+id/buttonContato"
-            android:layout_width="match_parent"
+            android:layout_width="155sp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Contatos">
         </Button>
 
         <Button
             android:id="@+id/buttonMensagem"
-            android:layout_width="match_parent"
+            android:layout_width="155sp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Mensagens">
         </Button>
 
         <Button
             android:id="@+id/buttonSair"
-            android:layout_width="match_parent"
+            android:layout_width="155sp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Sair">
         </Button>
 

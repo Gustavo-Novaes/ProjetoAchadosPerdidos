@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:background="#FAFAFA"
     android:fitsSystemWindows="true"
-    android:id="@+id/TelaInicio"
-    tools:context=".TelaInicio">
+    android:id="@+id/TelaCriarPostagem"
+    tools:context=".TelaCriarPostagem">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,95 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginBottom="10sp"
+            android:text="Título:">
+        </TextView>
 
+        <EditText
+            android:id="@+id/editTextTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o título e o nome do objeto achado."
+            android:inputType="text"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginBottom="10sp"
+            android:text="Imagem do objeto">
+        </TextView>
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="10sp"
+            android:src="@drawable/logo_app"/>
+
+        <Button
+            android:id="@+id/buttonImagem"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Adicionar Imagem"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginBottom="10sp"
+            android:text="Categoria">
+        </TextView>
+
+        <EditText
+            android:id="@+id/editTextCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Selecione a categoria do objeto"
+            android:inputType="text"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginBottom="10sp"
+            android:text="Descrição">
+        </TextView>
+
+        <EditText
+            android:id="@+id/editTextDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descreva o que desejar"
+            android:inputType="text"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/buttonFinalizar"
+            android:layout_width="155sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Finalizar"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/buttonCancelar"
+            android:layout_width="155sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Cancelar"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp" />
 
     </LinearLayout>
 
