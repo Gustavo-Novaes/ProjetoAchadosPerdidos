@@ -40,6 +40,7 @@ class TelaInicio : Fragment() {
             findNavController().navigate(R.id.action_TelaInicio_to_TelaCriarPostagem)
         }
 
+
         binding.buttonSair.setOnClickListener {
             findNavController().navigate(R.id.action_TelaInicio_to_TelaLogin)
         }
