@@ -1,111 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TelaCriarPostagem"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA"
+    android:background="#F5F1FA"
+    android:fillViewport="true"
     android:fitsSystemWindows="true"
-    android:id="@+id/TelaCriarPostagem"
     tools:context=".TelaCriarPostagem">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:gravity="center_horizontal"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp">
 
+        <!-- TÍTULO -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginBottom="10sp"
-            android:text="Título:">
-        </TextView>
+            android:text="Criar publicação"
+            android:textColor="#493568"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- SUBTÍTULO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Compartilhe informações sobre um objeto perdido ou encontrado."
+            android:textColor="#796F85"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- TÍTULO DO OBJETO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Título da publicação"
+            android:textColor="#493568"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
 
         <EditText
             android:id="@+id/editTextTitulo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Digite o título e o nome do objeto achado."
-            android:inputType="text"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_geral"
+            android:hint="Ex.: Chave encontrada"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#30283B"
+            android:textColorHint="#A49AAD"
+            android:textSize="14sp"
+            android:inputType="textCapSentences"
+            android:singleLine="true"
             android:layout_marginBottom="24dp"/>
 
+        <!-- IMAGEM DO OBJETO -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginBottom="10sp"
-            android:text="Imagem do objeto">
-        </TextView>
+            android:text="Imagem do objeto"
+            android:textColor="#493568"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
 
-        <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_gravity="start"
-            android:layout_marginBottom="10sp"
-            android:src="@drawable/logo_app"/>
+        <!-- ÁREA DA IMAGEM -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#EAE1F3"
+            android:layout_marginBottom="14dp">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@drawable/logo_app"
+                android:scaleType="fitCenter"
+                android:contentDescription="Pré-visualização da imagem do objeto"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adicione uma foto do objeto"
+                android:textColor="#796F85"
+                android:textSize="13sp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/buttonImagem"
-            android:layout_width="200sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:text="Adicionar Imagem"
-            android:textSize="18sp"
-            android:layout_marginBottom="24dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Adicionar imagem"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#493568"
+            android:textAllCaps="false"
+            android:backgroundTint="#DCCFEB"
+            android:layout_marginBottom="26dp"/>
 
+        <!-- CATEGORIA -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginBottom="10sp"
-            android:text="Categoria">
-        </TextView>
+            android:text="Categoria"
+            android:textColor="#493568"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
 
         <EditText
             android:id="@+id/editTextCategoria"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Selecione a categoria do objeto"
-            android:inputType="text"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_geral"
+            android:hint="Ex.: Documentos, eletrônicos..."
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#30283B"
+            android:textColorHint="#A49AAD"
+            android:textSize="14sp"
+            android:inputType="textCapSentences"
+            android:singleLine="true"
             android:layout_marginBottom="24dp"/>
 
+        <!-- DESCRIÇÃO -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginBottom="10sp"
-            android:text="Descrição">
-        </TextView>
+            android:text="Descrição"
+            android:textColor="#493568"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
 
         <EditText
             android:id="@+id/editTextDescricao"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Descreva o que desejar"
-            android:inputType="text"
-            android:layout_marginBottom="24dp"/>
+            android:layout_height="120dp"
+            android:background="@drawable/bg_geral"
+            android:hint="Descreva as características do objeto, local onde foi encontrado ou outras informações importantes..."
+            android:padding="16dp"
+            android:gravity="top|start"
+            android:textColor="#30283B"
+            android:textColorHint="#A49AAD"
+            android:textSize="14sp"
+            android:inputType="textMultiLine|textCapSentences"
+            android:layout_marginBottom="32dp"/>
 
+        <!-- BOTÃO FINALIZAR -->
         <Button
             android:id="@+id/buttonFinalizar"
-            android:layout_width="155sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Finalizar"
-            android:textSize="18sp"
-            android:layout_marginBottom="24dp" />
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Publicar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:backgroundTint="#493568"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp"/>
 
+        <!-- BOTÃO CANCELAR -->
         <Button
             android:id="@+id/buttonCancelar"
-            android:layout_width="155sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
             android:text="Cancelar"
-            android:textSize="18sp"
-            android:layout_marginBottom="24dp" />
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#493568"
+            android:textAllCaps="false"
+            android:backgroundTint="#DCCFEB"
+            android:layout_marginBottom="12dp"/>
 
     </LinearLayout>
-
 
 </androidx.core.widget.NestedScrollView>

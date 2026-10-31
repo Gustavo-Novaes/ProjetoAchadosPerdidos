@@ -1,81 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TelaPerfil"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA"
+    android:background="#F5F1FA"
+    android:fillViewport="true"
     android:fitsSystemWindows="true"
-    android:id="@+id/TelaPerfil"
     tools:context=".TelaPerfil">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:gravity="center_horizontal"
+        android:padding="24dp">
 
+        <!-- TÍTULO DA PÁGINA -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginBottom="10sp"
-            android:text="Nome do Fulano">
-        </TextView>
+            android:text="Meu Perfil"
+            android:textColor="#493568"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"/>
 
+        <!-- FOTO DO PERFIL -->
         <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="10sp"
-            android:layout_marginRight="108dp"
-            android:src="@drawable/logo_app"/>
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/logo_app"
+            android:scaleType="fitCenter"
+            android:contentDescription="Foto de perfil do usuário"/>
 
+        <!-- NOME DO USUÁRIO -->
         <TextView
+            android:id="@+id/textViewNomePerfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginBottom="10sp"
-            android:text="Login do Fulano">
-        </TextView>
+            android:text="Nome do Fulano"
+            android:textColor="#493568"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="28dp"/>
 
-        <TextView
+        <!-- CARTÃO DE INFORMAÇÕES -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginBottom="10sp"
-            android:text="E-Mail do Fulano">
-        </TextView>
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="20dp"
+            android:elevation="3dp"
+            android:layout_marginBottom="20dp">
 
-        <TextView
+            <!-- LOGIN -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:textColor="#9672B8"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/textViewLoginPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login do Fulano"
+                android:textColor="#30283B"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- E-MAIL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E-MAIL"
+                android:textColor="#9672B8"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/textViewEmailPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E-mail do Fulano"
+                android:textColor="#30283B"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- TELEFONE -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TELEFONE"
+                android:textColor="#9672B8"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/textViewTelefonePerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefone do Fulano"
+                android:textColor="#30283B"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <!-- ITENS CADASTRADOS -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginBottom="10sp"
-            android:text="Telefone do Fulano">
-        </TextView>
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#DCCFEB"
+            android:padding="22dp"
+            android:layout_marginBottom="28dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginBottom="10sp"
-            android:text="Itens cadastrados">
-        </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Itens cadastrados"
+                android:textColor="#493568"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"/>
 
+            <TextView
+                android:id="@+id/textViewItensPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#493568"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- BOTÃO EDITAR PERFIL -->
         <Button
             android:id="@+id/buttonEditarPerfil"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Editar Perfil">
-        </Button>
+            android:layout_height="56dp"
+            android:text="Editar Perfil"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="#493568"
+            android:elevation="4dp"
+            android:layout_marginBottom="14dp"/>
 
+        <!-- BOTÃO VOLTAR -->
         <Button
             android:id="@+id/buttonVoltar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Voltar">
-        </Button>
+            android:layout_height="52dp"
+            android:text="Voltar"
+            android:textColor="#493568"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:backgroundTint="#DCCFEB"
+            android:layout_marginBottom="12dp"/>
 
     </LinearLayout>
 

@@ -1,81 +1,327 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TelaInicio"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA"
-    android:fitsSystemWindows="true"
-    android:id="@+id/TelaInicio"
+    android:orientation="vertical"
+    android:background="#F5F1FA"
     tools:context=".TelaInicio">
 
+    <!-- ÁREA ROLÁVEL -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <!-- CONTEÚDO DO FEED -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- CABEÇALHO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#493568"
+                android:padding="22dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Achados e Perdidos"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Encontre o que procura. Ajude quem perdeu."
+                    android:textColor="#E8DDF2"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- PESQUISA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/editTextPesquisa"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_geral"
+                        android:hint="Pesquisar objetos..."
+                        android:paddingStart="14dp"
+                        android:paddingEnd="8dp"
+                        android:textColor="#30283B"
+                        android:textColorHint="#A49AAD"
+                        android:textSize="13sp"
+                        android:singleLine="true"
+                        android:inputType="text"/>
+
+                    <Button
+                        android:id="@+id/buttonPesquisar"
+                        android:layout_width="90dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
+                        android:text="Buscar"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:textColor="#493568"
+                        android:backgroundTint="#DCCFEB"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- CONTEÚDO PRINCIPAL -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="22dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Publicações recentes"
+                    android:textColor="#493568"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confira os objetos perdidos e encontrados."
+                    android:textColor="#796F85"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="18dp"/>
+
+                <!-- CRIAR POSTAGEM -->
+                <Button
+                    android:id="@+id/buttonCriarPostagem"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="+  Criar nova publicação"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#493568"
+                    android:elevation="3dp"
+                    android:layout_marginBottom="24dp"/>
+
+                <!-- PUBLICAÇÃO 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+                    android:elevation="3dp"
+                    android:padding="14dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Publicado por: Usuário"
+                        android:textColor="#9672B8"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        android:background="#EAE1F3"
+                        android:src="@drawable/logo_app"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Imagem ilustrativa de uma publicação"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Objeto encontrado"
+                        android:textColor="#493568"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Categoria: Objetos pessoais"
+                        android:textColor="#9672B8"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Descrição do objeto encontrado. Aqui aparecerão informações fornecidas pelo usuário que realizou a publicação."
+                        android:textColor="#796F85"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="4dp"/>
+
+                </LinearLayout>
+
+                <!-- PUBLICAÇÃO 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+                    android:elevation="3dp"
+                    android:padding="14dp"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Publicado por: Usuário"
+                        android:textColor="#9672B8"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        android:background="#EAE1F3"
+                        android:src="@drawable/logo_app"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Imagem ilustrativa de uma publicação"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Objeto perdido"
+                        android:textColor="#493568"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Categoria: Acessórios"
+                        android:textColor="#9672B8"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Descrição do objeto perdido. Aqui aparecerão os detalhes informados pelo usuário."
+                        android:textColor="#796F85"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="4dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- NAVEGAÇÃO INFERIOR FIXA -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:elevation="8dp">
 
-        <EditText
+        <!-- BOTÕES DE NAVEGAÇÃO -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </EditText>
-
-        <Button
-            android:id="@+id/buttonPesquisar"
-            android:layout_width="155sp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Pesquisar">
-        </Button>
+            android:orientation="horizontal"
+            android:gravity="center">
 
-        <Button
-            android:id="@+id/buttonCriarPostagem"
-            android:layout_width="155sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="+">
-        </Button>
+            <Button
+                android:id="@+id/buttonInicio"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:minWidth="0dp"
+                android:text="Início"
+                android:textSize="10sp"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:backgroundTint="#493568"/>
 
-        <Button
-            android:id="@+id/buttonInicio"
-            android:layout_width="155sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Início">
-        </Button>
+            <Button
+                android:id="@+id/buttonPerfil"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:minWidth="0dp"
+                android:text="Perfil"
+                android:textSize="10sp"
+                android:textColor="#493568"
+                android:textAllCaps="false"
+                android:backgroundTint="#DCCFEB"/>
 
-        <Button
-            android:id="@+id/buttonPerfil"
-            android:layout_width="155sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Perfil">
-        </Button>
+            <Button
+                android:id="@+id/buttonContato"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:minWidth="0dp"
+                android:text="Contatos"
+                android:textSize="10sp"
+                android:textColor="#493568"
+                android:textAllCaps="false"
+                android:backgroundTint="#DCCFEB"/>
 
-        <Button
-            android:id="@+id/buttonContato"
-            android:layout_width="155sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Contatos">
-        </Button>
+            <Button
+                android:id="@+id/buttonMensagem"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:minWidth="0dp"
+                android:text="Mensagens"
+                android:textSize="9sp"
+                android:textColor="#493568"
+                android:textAllCaps="false"
+                android:backgroundTint="#DCCFEB"/>
 
-        <Button
-            android:id="@+id/buttonMensagem"
-            android:layout_width="155sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Mensagens">
-        </Button>
+        </LinearLayout>
 
+        <!-- SAIR -->
         <Button
             android:id="@+id/buttonSair"
-            android:layout_width="155sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Sair">
-        </Button>
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Sair da conta"
+            android:textSize="13sp"
+            android:textColor="#796F85"
+            android:textAllCaps="false"
+            android:backgroundTint="#F5F1FA"
+            android:layout_marginTop="6dp"/>
 
     </LinearLayout>
 
-</androidx.core.widget.NestedScrollView>
+</LinearLayout>
